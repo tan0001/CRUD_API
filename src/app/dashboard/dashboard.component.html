@@ -1,0 +1,83 @@
+<div class="dashboard">
+<!--
+    <button class="dashboard">Retrieve Product by ID</button> //(click)="onSelectID()"
+    <a class="dashboard" routerLink="/add" class="button">Add New Product</a>
+-->    
+    <!--
+    <div *ngIf="details">
+        Service Code : {{details.code}}
+        Message : {{details.message}}
+        Result : {{details.result[3].name}} , {{details.result[3].status}}
+    </div>
+    -->
+    <hr class="dashboard">
+    <!--
+    <div *ngFor="let r in result">
+        {{r}}
+    </div>
+    -->
+
+</div>
+<!--<div class="month" *ngFor="let item of [].constructor(i); let ind = index">
+    {{ind}}
+    </div>
+-->
+<!--
+<div class="retrieve-product" *ngIf="displaySelect">
+    <h2>Retrieve Product by ID</h2>
+    <app-product-retrieve></app-product-retrieve>
+</div>
+-->
+<div class="display">
+    <table class="display"> <!--*ngIf="details"-->
+        <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="status">Status</th>
+                <th colspan="4" class="serv">Service</th>
+                <!--<th class="price">Price</th>-->
+            </tr>
+
+        </thead>
+<!--
+        <tr *ngFor="let item of [].constructor(7); let ind = index">
+            //<tr *ngFor="let item of details.result; let i = index"></tr>
+            <td class="name">{{details.result[ind].name}}</td>
+            <td class="status">{{details.result[ind].status}}</td>
+        -->
+        <tr>
+            <td class="start" (click)="onStart()"> <button>Start</button> </td>
+            <td class="restart" (click)="onRestart()"> <button>Restart</button> </td>
+            <td class="stop" (click)="onStop()"> <button>Stop</button> </td>
+            <td class="logs" (click)="onLogs()"> <button>Logs</button> </td>
+            <!--<td>{{details.result}}</td>-->
+            
+            <!--
+                    <td><button class="button" (click)="onDelete(product)"> Delete </button></td>
+                    <td class="button1"><a routerLink="/delete/{{product.id}}"> Delete </a></td> //commented line
+                    <td class="button1"><a routerLink="/update/{{product.id}}"> Update </a></td>
+                    <td class="button1"><a routerLink="/detail/{{product.id}}"> View </a></td>
+                    -->
+
+        </tr>
+    </table>
+
+    {{msg}}
+</div>
+<!--
+<div class="delete-product" *ngIf="displayDelete && selectedProduct">
+    <h2>Delete Product</h2>
+    <div id="confirm">
+        <h3>Confirmation</h3>
+        <p>Do you really want to delete this product?</p>
+        <p>{{selectedProduct.id}} : {{selectedProduct.name}}</p>
+        <button class="warning" (click)="confirmYes()">Yes</button>
+        <button (click)="confirmNo()">No</button>
+    </div>
+    //commented!--
+    <div *ngIf="confirm === 1">
+        <app-product-delete [product]="selectedProduct"></app-product-delete>
+    </div>
+    --//commented
+</div>
+-->
