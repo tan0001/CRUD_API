@@ -3,13 +3,12 @@
     <button class="dashboard">Retrieve Product by ID</button> //(click)="onSelectID()"
     <a class="dashboard" routerLink="/add" class="button">Add New Product</a>
 -->    
-    <!--
+
     <div *ngIf="details">
         Service Code : {{details.code}}
         Message : {{details.message}}
         Result : {{details.result[3].name}} , {{details.result[3].status}}
     </div>
-    -->
     <hr class="dashboard">
     <!--
     <div *ngFor="let r in result">
@@ -29,7 +28,7 @@
 </div>
 -->
 <div class="display">
-    <table class="display"> <!--*ngIf="details"-->
+    <table class="display" *ngIf="details"> <!--*ngIf="details"-->
         <thead>
             <tr>
                 <th class="name">Name</th>
@@ -39,13 +38,13 @@
             </tr>
 
         </thead>
-<!--
+
         <tr *ngFor="let item of [].constructor(7); let ind = index">
-            //<tr *ngFor="let item of details.result; let i = index"></tr>
+            <!--<tr *ngFor="let item of details.result; let i = index"></tr>-->
             <td class="name">{{details.result[ind].name}}</td>
             <td class="status">{{details.result[ind].status}}</td>
-        -->
-        <tr>
+
+
             <td class="start" (click)="onStart()"> <button>Start</button> </td>
             <td class="restart" (click)="onRestart()"> <button>Restart</button> </td>
             <td class="stop" (click)="onStop()"> <button>Stop</button> </td>
